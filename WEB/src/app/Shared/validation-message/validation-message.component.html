@@ -1,0 +1,7 @@
+<div class="validation-errors">
+    <ng-container *ngFor="let validation of GetMessageArray()">
+        <div class="error-message" *ngIf="CheckValidation(validation)">
+            {{ validation.message }}
+        </div>
+    </ng-container>
+</div>

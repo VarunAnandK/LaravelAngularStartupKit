@@ -1,0 +1,22 @@
+<form [formGroup]="UserRoleForm">
+    <div class="row">
+        <div class="col-lg-12 form-group">
+            <app-label Required="True" LabelText="Name"></app-label>
+            <input formControlName="name" class="form-control" [(ngModel)]="UserRoleData.name" />
+            <app-validation-message propertyName="name" [MessageArray]="UserRoleValidationMessages" [FormGroupName]="UserRoleForm"></app-validation-message>
+        </div>
+        <div class="col-lg-12 form-group">
+            <app-label Required="True" LabelText="Landing Page"></app-label>
+            <input formControlName="landing_page" class="form-control" [(ngModel)]="UserRoleData.landing_page" />
+            <app-validation-message propertyName="landing_page" [MessageArray]="UserRoleValidationMessages" [FormGroupName]="UserRoleForm"></app-validation-message>
+        </div>
+    </div>
+</form>
+<hr />
+<div class="row">
+    <div class="col-lg-12 pull-left">
+        <button type="button" appRightbutton rights="New" class="btn btn-success waves-effect waves-light m-1" *ngIf="UserRoleData.id == 0" (click)="CreateOrUpdate()"><i class="fa fa-save"></i><span> Save</span></button>
+        <button type="button" appRightbutton rights="Update" class="btn btn-success waves-effect waves-light m-1" *ngIf="UserRoleData.id > 0" (click)="CreateOrUpdate()"><i class="fa fa-save"></i><span> Update</span></button>
+        <button type="button" appRightbutton rights="Delete" class="btn btn-danger waves-effect waves-light m-1" *ngIf="UserRoleData.id > 0" (click)="Delete()"><i class="fa fa-trash"></i><span> Delete</span></button>
+    </div>
+</div>

@@ -1,0 +1,245 @@
+  /* You can add global styles to this file, and also import other style files */
+  
+  .ui-dropdown {
+      width: 100% !important;
+      min-width: auto !important;
+  }
+  
+  .ui-multiselect {
+      width: 100% !important;
+      min-width: auto !important;
+  }
+  
+  .ui-state-disabled,
+  .ui-widget:disabled {
+      background: #c8c8c8 !important;
+  }
+  
+  .ui-dropdown .ui-dropdown-panel {
+      min-width: 100%;
+      width: max-content;
+      z-index: 9999;
+  }
+  
+  @media (min-width: 1200px) {
+      .container {
+          max-width: 100% !important;
+      }
+  }
+  
+  .spinner_overlay {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      opacity: 0.2;
+      z-index: 9999;
+  }
+  
+  @media only screen and (max-width: 600px) {
+      body .ui-dialog {
+          width: 100% !important;
+      }
+      .card-box {
+          padding: 0 !important;
+      }
+      .card-body {
+          padding: 0 !important;
+      }
+  }
+  
+  body .ui-dialog .ui-dialog-content {
+      max-height: 600px;
+      overflow-y: auto;
+  }
+  
+  .error-message {
+      color: red;
+  }
+  
+  .ui-table .ui-table-tbody>tr>td {
+      word-wrap: break-word;
+  }
+  
+  .btn-file {
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .btn-file input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      cursor: inherit;
+      display: block;
+  }
+  
+  body .ui-panel .ui-panel-titlebar {
+      font-weight: bold;
+  }
+  
+  hr {
+      border-top: 1.5px solid black !important;
+  }
+  
+  .image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -60px 0 0 -60px;
+      z-index: 9999;
+  }
+  
+  body .ui-table .ui-table-thead>tr>th {
+      font-size: small !important;
+  }
+  
+  .text-black {
+      color: black;
+  }
+  
+  @media screen and (max-width: 40em) {
+      body .ui-tabview.ui-tabview-top .ui-tabview-nav li {
+          width: 100% !important;
+      }
+      body .ui-table.ui-table-responsive .ui-table-tbody>tr>td {
+          border: 1px solid #c8c8c8 !important;
+      }
+  }
+  
+  @media (max-width: 767.98px) {
+      .pro-user-name {
+          display: block !important;
+      }
+  }
+  
+  .navbar-custom .button-menu-mobile {
+      width: auto !important;
+  }
+  
+  @media (max-width: 767.98px) {
+      .page-title-box .breadcrumb {
+          display: block !important;
+      }
+  }
+  
+  .breadcrumb-item>a {
+      margin-left: 10px;
+      font-weight: bold;
+  }
+  
+  .breadcrumb-item.active {
+      font-weight: bold;
+  }
+  
+  input[readonly],
+  input[disabled] {
+      background-color: #c8c8c8 !important;
+      color: black !important;
+  }
+  
+  body .ui-state-disabled,
+  body .ui-widget:disabled {
+      opacity: 1 !important;
+  }
+  
+  .angular-editor-toolbar {
+      display: none;
+  }
+  
+  .angular-editor-textarea {
+      min-height: 200px !important;
+  }
+  
+  @media only screen and (max-width: 600px) {
+      .card-box {
+          width: fit-content !important;
+      }
+  }
+  
+  .dropdown-menu {
+      position: inherit !important;
+  }
+  /* .lockform {
+      pointer-events: none;
+  }
+
+  .lockform input,
+  .lockform textarea {
+      background-color: #c8c8c8 !important;
+      color: black !important;
+  }
+
+  .lockform button,
+  .lockform a {
+      background: #c8c8c8 !important;
+      color: black !important;
+  } */
+  
+  body .lockform .ui-dropdown label.ui-dropdown-label,
+  .lockform .ui-dropdown .ui-dropdown-trigger {
+      background: #c8c8c8 !important;
+      color: black !important;
+  }
+  
+  body {
+      padding-bottom: unset !important;
+  }
+  
+  .afterhedaer {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .ui-datepicker td>a,
+  .ui-datepicker td>span {
+      padding: unset !important;
+  }
+  
+  .ui-calendar {
+      width: 100% !important;
+  }
+  
+  .ui-datepicker {
+      width: 324px !important;
+  }
+  
+  .report-font-and-size {
+      width: 8.27in;
+      /* height: 11.7in; */
+      margin: auto;
+      background-color: #FFFFFF;
+  }
+  
+  #SignaturePad {
+      width: auto;
+      box-shadow: 0 0 5px 1px #ddd inset;
+      border: dashed 2px #53777A;
+      border: dashed 1px #53777A;
+      margin: 0;
+      text-align: center;
+      min-height: 80px;
+      min-width: 340px;
+      transition: .2s;
+  }
+  
+  .ui-dropdown .ui-dropdown-label {
+      white-space: unset !important;
+  }
+  
+  body .ui-dropdown .ui-dropdown-trigger {
+      background-color: unset !important;
+  }
+  
+  body .ui-inputtext {
+      background-color: unset !important;
+  }

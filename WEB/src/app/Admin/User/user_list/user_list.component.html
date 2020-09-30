@@ -1,0 +1,31 @@
+<p-panel>
+    <p-header>
+        User List
+    </p-header>
+    <button type="button" appRightbutton rights="New" class="btn btn-primary waves-effect waves-light m-1" (click)="OpenPopup(0)"><i class="fa fa-plus"></i><span> New</span></button>
+    <hr/>
+    <p-table responsive="true" #dt [columns]="Columns" [value]="UserList" [paginator]="true" [rows]="10">
+        <ng-template pTemplate="caption">
+            <input type="text" class="form-control" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')">
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field"></p-sortIcon>
+                </th>
+                <th style="width: 6%;">Edit</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns ">
+            <tr>
+                <td *ngFor="let col of columns">
+                    <span class="ui-column-title">{{col.header}}</span> {{rowData | GetArrayValue : col }}
+                </td>
+                <td>
+                    <a appRightbutton rights="Edit" class="btn btn-primary waves-effect waves-light" (click)="OpenPopup(rowData.id)"><i class="fe-check-square"></i></a>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-panel>

@@ -1,0 +1,32 @@
+<form [formGroup]="UserForm">
+    <div class="row">
+        <div class="col-lg-12 form-group">
+            <app-label Required="True" LabelText="User Role"></app-label>
+            <p-dropdown appendTo="body" [filter]="true" [options]="UserRoleDropdown" formControlName="user_role_id" [(ngModel)]="UserData.user_role_id"></p-dropdown>
+            <app-validation-message propertyName="user_role_id" [MessageArray]="UserValidationMessages" [FormGroupName]="UserForm"></app-validation-message>
+        </div>
+        <div class="col-lg-12 form-group">
+            <app-label Required="True" LabelText="User Name"></app-label>
+            <input formControlName="user_name" class="form-control" [(ngModel)]="UserData.user_name" />
+            <app-validation-message propertyName="user_name" [MessageArray]="UserValidationMessages" [FormGroupName]="UserForm"></app-validation-message>
+        </div>
+        <div class="col-lg-12 form-group" *ngIf="UserData.id == 0">
+            <app-label Required="True" LabelText="Password"></app-label>
+            <input formControlName="password" class="form-control" [(ngModel)]="UserData.password" />
+            <app-validation-message propertyName="password" [MessageArray]="UserValidationMessages" [FormGroupName]="UserForm"></app-validation-message>
+        </div>
+        <div class="col-lg-12 form-group">
+            <app-label Required="True" LabelText="Email"></app-label>
+            <input formControlName="email" class="form-control" [(ngModel)]="UserData.email" />
+            <app-validation-message propertyName="email" [MessageArray]="UserValidationMessages" [FormGroupName]="UserForm"></app-validation-message>
+        </div>
+    </div>
+</form>
+<hr />
+<div class="row">
+    <div class="col-lg-12 pull-left">
+        <button type="button" appRightbutton rights="New" class="btn btn-success waves-effect waves-light m-1" *ngIf="UserData.id == 0" (click)="CreateOrUpdate()"><i class="fa fa-save"></i><span> Save</span></button>
+        <button type="button" appRightbutton rights="Update" class="btn btn-success waves-effect waves-light m-1" *ngIf="UserData.id > 0" (click)="CreateOrUpdate()"><i class="fa fa-save"></i><span> Update</span></button>
+        <button type="button" appRightbutton rights="Delete" class="btn btn-danger waves-effect waves-light m-1" *ngIf="UserData.id > 0" (click)="Delete()"><i class="fa fa-trash"></i><span> Delete</span></button>
+    </div>
+</div>
